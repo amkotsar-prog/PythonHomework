@@ -1,13 +1,11 @@
-number = int(input('Введите целое положительное число: '))
-while number // 10 > 1:
-    a = number % 10
+number_init = int(input('Введите целое положительное число: '))
+max_digit = 0
+number = number_init
+
+while number // 10 > 0:
+    digit = number % 10
+    if digit >= max_digit:
+        max_digit = digit
+
     number = number // 10
-    b = number % 10
-    if a > b:
-        a = a
-    else:
-        a = b
-print(f'{a} - самая большая цифра в  данном числе')
-
-
-
+print(f'{max_digit} - самая большая цифра в  данном числе')
